@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import Link from 'next/link'
 import { FC, ReactNode } from 'react'
+import { Footer } from '../Footer'
+import { Header } from '../Header'
 
 type Props = {
   children: ReactNode
@@ -8,21 +8,12 @@ type Props = {
 
 export const AppLayout: FC<Props> = ({ children }) => {
   return (
-    <div>
-      <Head>
-        <title>nishi page</title>
-        <meta name='description' content='nishi page' />
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-      <header>
-        <Link className='text-xl' href='/'>
-          nishi
-        </Link>
-      </header>
-      {children}
-      <footer>
-        <div>2022</div>
-      </footer>
+    <div className='bg-gray-100'>
+      <div className='mx-auto max-w-pageContent'>
+        <Header />
+        {children}
+        <Footer />
+      </div>
     </div>
   )
 }

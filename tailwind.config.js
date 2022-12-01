@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       maxWidth: {
         pageContent: '640px',
-      }
+      },
     },
   },
   plugins: [],

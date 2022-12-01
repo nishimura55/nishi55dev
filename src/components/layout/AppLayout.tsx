@@ -8,7 +8,7 @@ type AppLayoutProps = {
 
 export const AppLayout: FC<AppLayoutProps> = ({ children }) => {
   return (
-    <div className='mx-auto flex h-screen max-w-pageContent flex-col content-between bg-gray-100'>
+    <div className='mx-auto flex h-screen max-w-pageContent flex-col content-between'>
       <Header />
       <div className='flex-1'>{children}</div>
       <Footer />

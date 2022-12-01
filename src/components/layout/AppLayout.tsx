@@ -8,12 +8,10 @@ type Props = {
 
 export const AppLayout: FC<Props> = ({ children }) => {
   return (
-    <div className='bg-gray-100'>
-      <div className='mx-auto max-w-pageContent'>
-        <Header />
-        {children}
-        <Footer />
-      </div>
+    <div className='mx-auto flex h-screen max-w-pageContent flex-col content-between bg-gray-100'>
+      <Header />
+      <div className='flex-1'>{children}</div>
+      <Footer />
     </div>
   )
 }

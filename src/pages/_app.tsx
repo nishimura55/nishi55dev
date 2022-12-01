@@ -5,13 +5,15 @@ import Head from 'next/head'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <AppLayout>
+    <>
       <Head>
         <title>nishi page</title>
         <meta name='description' content='nishi page' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Component {...pageProps} />
-    </AppLayout>
+      <AppLayout>
+        <Component {...pageProps} />
+      </AppLayout>
+    </>
   )
 }

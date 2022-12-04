@@ -1,9 +1,9 @@
-import { FC, ReactNode } from 'react'
+import { FC } from 'react'
 
 type PageTitleProps = {
-  children: ReactNode
+  title: string
 }
 
-export const PageTitle: FC<PageTitleProps> = ({ children }) => {
-  return <h1 className='mb-5 text-3xl'>{children}</h1>
+export const PageTitle: FC<PageTitleProps> = ({ title }) => {
+  return <h1 className='mb-5 text-center text-3xl'>{title}</h1>
 }

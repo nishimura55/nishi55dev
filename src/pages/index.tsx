@@ -4,7 +4,7 @@ import { PageTitle } from '../components/common/PageTitle'
 const Home: NextPage = () => {
   return (
     <div className='h-full bg-blue-300 p-4 text-white'>
-      <PageTitle>Blog post</PageTitle>
+      <PageTitle title='Blog post' />
       {/* TODO: ブログ一覧を表示 */}
       <div className='mt-4'>coming soon...</div>
     </div>

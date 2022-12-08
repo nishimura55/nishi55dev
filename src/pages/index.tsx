@@ -4,6 +4,7 @@ import * as fs from 'fs/promises'
 import * as path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
+import { format, parseISO } from 'date-fns'
 
 type PostHeadline = {
   title: string
@@ -28,8 +29,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
             <h2>
               <Link href={`/posts/${post.slug}`}>{post.title}</Link>
             </h2>
-            {/* TODO: 日付表示整える */}
-            <div className='text-sm'>{post.publishedAt}</div>
+            <div className='text-sm'>{format(parseISO(post.publishedAt), 'yyyy.MM.dd')}</div>
           </article>
         ))}
       </div>

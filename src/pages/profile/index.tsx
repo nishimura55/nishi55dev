@@ -9,7 +9,7 @@ const Profile: NextPage = () => {
   return (
     <div className='h-full bg-blue-300 p-4 pb-8 text-white'>
       <PageTitle title='Profile' />
-      <div className='flex flex-col items-center gap-7 text-center'>
+      <div className='mt-3 flex flex-col items-center gap-7 text-center'>
         <Image
           src={ProfileImage}
           alt='プロフィール画像'

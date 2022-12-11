@@ -55,9 +55,9 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
       }
     }),
   )
-  const posts = groupedPosts.flat()
-
-  // TODO: 日付のソート処理
+  const posts = groupedPosts
+    .flat()
+    .sort((a, b) => (new Date(a.publishedAt) > new Date(b.publishedAt) ? -1 : 1))
 
   return {
     props: { posts },

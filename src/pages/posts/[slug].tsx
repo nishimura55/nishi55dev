@@ -2,10 +2,9 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import * as fs from 'fs/promises'
 import * as path from 'path'
 import matter from 'gray-matter'
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
 import { PageTitle } from '~/src/components/common/PageTitle'
 import { parseISO, format } from 'date-fns'
+import { MarkdownRenderer } from '~/src/components/MarkdownRenderer'
 
 type PostProps = {
   title: string
@@ -22,7 +21,7 @@ const Post: NextPage<PostProps> = ({ title, publishedAt, content }) => {
         {format(parseISO(publishedAt), 'yyyy.MM.dd')}
       </div>
       <div className='mt-4'>
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+        <MarkdownRenderer md={content} />
       </div>
     </div>
   )

@@ -5,6 +5,5 @@
 @layer base {
   body {
     @apply bg-gray-100 font-mono;
-    font-size: 1.2rem;
   }
 }

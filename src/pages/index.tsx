@@ -26,7 +26,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
       <div className='mt-3 px-4 sm:px-8'>
         {posts.map((post) => (
           <article key={post.slug} className='mt-4'>
-            <h2>
+            <h2 className='text-lg'>
               <Link href={`/posts/${post.slug}`}>{post.title}</Link>
             </h2>
             <div className='text-sm'>{format(parseISO(post.publishedAt), 'yyyy.MM.dd')}</div>

@@ -22,7 +22,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
   return (
     <div className='h-full bg-blue-300 p-4 text-white'>
       <PageTitle title='nishiのブログページ' isVisible={false} />
-      <div className='mt-3 px-4 sm:px-8'>
+      <div className='mt-3 sm:px-8'>
         {posts.map((post) => (
           <article key={post.slug} className='mt-4'>
             <h2 className='text-lg'>

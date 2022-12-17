@@ -8,7 +8,7 @@ import { links, skillNames } from '~/src/constants/profile'
 const Profile: NextPage = () => {
   return (
     <div className='h-full bg-blue-300 p-4 pb-8 text-white'>
-      <PageTitle title='Profile' />
+      <PageTitle title='nishiのプロフィール' isVisible={false} />
       <div className='mt-3 flex flex-col items-center gap-7 text-center'>
         <Image
           src={ProfileImage}

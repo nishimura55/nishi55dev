@@ -21,8 +21,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
 
   return (
     <div className='h-full bg-blue-300 p-4 text-white'>
-      <h1 className='absolute h-0 w-0 opacity-0'>nishiのブログページ</h1>
-      <PageTitle title='Blog post' tagName='h2' />
+      <PageTitle title='nishiのブログページ' isVisible={false} />
       <div className='mt-3 px-4 sm:px-8'>
         {posts.map((post) => (
           <article key={post.slug} className='mt-4'>

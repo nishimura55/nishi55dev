@@ -13,7 +13,7 @@ type PostProps = {
 }
 
 const Post: NextPage<PostProps> = ({ title, publishedAt, content }) => {
-  console.log({ content })
+  console.log(content, { content })
   return (
     <div className='h-full bg-blue-300 p-4 text-white'>
       <PageTitle title={title} size='sm' />

@@ -5,9 +5,12 @@ publishedAt: '2022-12-05T20:00:00+09:00'
 
 これはテストの投稿です
 
-```
+```typescript
 // テストのコード
-const hoge = 1
+type Hoge = {
+  foo: number
+}
+const hoge: Hoge = { foo: 1 }
 ```
 
 ## 見出し 1

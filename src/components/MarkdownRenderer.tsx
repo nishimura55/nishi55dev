@@ -2,6 +2,7 @@ import { FC } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { Blockquote } from '~/src/components/markdown/Blockquote'
+import { CodeSyntaxHighlighter } from '~/src/components/markdown/CodeSyntaxHighlighter'
 import { Heading2 } from '~/src/components/markdown/Heading2'
 import { Heading3 } from '~/src/components/markdown/Heading3'
 import { HorizontalRule } from '~/src/components/markdown/HorizontalRule'
@@ -23,6 +24,7 @@ export const MarkdownRenderer: FC<MarkdownRendererProps> = ({ md }) => {
         ul: UnorderedList,
         hr: HorizontalRule,
         blockquote: Blockquote,
+        code: CodeSyntaxHighlighter,
       }}
     >
       {md}

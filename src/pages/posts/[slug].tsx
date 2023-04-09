@@ -6,7 +6,7 @@ import { PageTitle } from '~/src/components/common/PageTitle'
 import { parseISO, format } from 'date-fns'
 import { MarkdownRenderer } from '~/src/components/MarkdownRenderer'
 
-type PostProps = {
+interface PostProps {
   title: string
   publishedAt: string
   content: string
@@ -14,6 +14,7 @@ type PostProps = {
 
 const Post: NextPage<PostProps> = ({ title, publishedAt, content }) => {
   console.log(content, { content })
+
   return (
     <div className='h-full bg-blue-300 p-4 text-white'>
       <PageTitle title={title} size='sm' />

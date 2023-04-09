@@ -1,12 +1,12 @@
-import { FC, ReactNode } from 'react'
+import { ReactNode } from 'react'
 import { Footer } from '../Footer'
 import { Header } from '../Header'
 
-type AppLayoutProps = {
+interface AppLayoutProps {
   children: ReactNode
 }
 
-export const AppLayout: FC<AppLayoutProps> = ({ children }) => {
+export const AppLayout = ({ children }: AppLayoutProps) => {
   return (
     <div className='mx-auto flex h-screen max-w-pageContent flex-col content-between'>
       <Header />

@@ -1,6 +1,4 @@
-import { FC } from 'react'
-
-export const Footer: FC = () => {
+export const Footer = () => {
   return (
     <footer>
       <div className='flex justify-center bg-gray-300 py-4 text-sm'>

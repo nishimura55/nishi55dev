@@ -6,13 +6,13 @@ import matter from 'gray-matter'
 import Link from 'next/link'
 import { format, parseISO } from 'date-fns'
 
-type PostHeadline = {
+interface PostHeadline {
   title: string
   publishedAt: string
   slug: string
 }
 
-type HomeProps = {
+interface HomeProps {
   posts: PostHeadline[]
 }
 

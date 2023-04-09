@@ -1,4 +1,3 @@
-import { FC } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { Blockquote } from '~/src/components/markdown/Blockquote'
@@ -9,11 +8,11 @@ import { HorizontalRule } from '~/src/components/markdown/HorizontalRule'
 import { Paragraph } from '~/src/components/markdown/Paragraph'
 import { UnorderedList } from '~/src/components/markdown/UnorderedList'
 
-type MarkdownRendererProps = {
+interface MarkdownRendererProps {
   md: string
 }
 
-export const MarkdownRenderer: FC<MarkdownRendererProps> = ({ md }) => {
+export const MarkdownRenderer = ({ md }: MarkdownRendererProps) => {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}

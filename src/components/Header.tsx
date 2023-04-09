@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import { FC } from 'react'
 
-export const Header: FC = () => {
+export const Header = () => {
   return (
     <header>
       <div className='flex items-end justify-between bg-blue-800 p-4 text-white'>

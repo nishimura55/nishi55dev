@@ -8,5 +8,18 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.hidden-but-accessible': {
+          position: 'absolute',
+          clipPath: 'polygon(0 0, 0 0, 0 0, 0 0)',
+          width: '1px',
+          height: '1px',
+          overflow: 'hidden',
+          whiteSpace: 'nowrap',
+        },
+      })
+    },
+  ],
 }

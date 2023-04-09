@@ -14,7 +14,7 @@ export const PageTitle = ({
   return (
     <HeaderTag
       className={`text-center ${size === 'md' ? 'text-3xl' : 'text-xl'} ${
-        isVisible ? '' : 'absolute h-0 w-0 opacity-0'
+        isVisible ? '' : 'hidden-but-accessible'
       }`}
     >
       {title}

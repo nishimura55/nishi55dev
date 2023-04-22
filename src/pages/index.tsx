@@ -2,9 +2,9 @@ import { GetStaticProps, NextPage } from 'next'
 import { PageTitle } from '../components/common/PageTitle'
 import * as fs from 'fs/promises'
 import * as path from 'path'
-import matter from 'gray-matter'
 import Link from 'next/link'
 import { format, isAfter, parseISO } from 'date-fns'
+import { markdownDataExtractor } from '~/src/utils/markdownDataExtractor'
 
 interface PostHeadline {
   title: string
@@ -42,10 +42,8 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const groupedPosts = await Promise.all(
     slugs.map(async (slug) => {
       const filePath = path.join(contentsDirPath, slug)
-      const content = await fs.readFile(filePath, 'utf-8')
-      const data = matter(content).data
-      const title = typeof data.title === 'string' ? data.title : '題名なし'
-      const publishedAt = typeof data.publishedAt === 'string' ? data.publishedAt : '公開日不明'
+      const md = await fs.readFile(filePath, 'utf-8')
+      const { title, publishedAt } = markdownDataExtractor(md)
 
       return {
         title,

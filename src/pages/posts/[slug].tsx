@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import * as fs from 'fs/promises'
 import * as path from 'path'
-import matter from 'gray-matter'
 import { PageTitle } from '~/src/components/common/PageTitle'
 import { parseISO, format } from 'date-fns'
 import { MarkdownRenderer } from '~/src/components/MarkdownRenderer'
+import { markdownDataExtractor } from '~/src/utils/markdownDataExtractor'
 
 interface PostProps {
   title: string
@@ -48,13 +48,10 @@ export const getStaticProps: GetStaticProps<PostProps, { slug: string }> = async
     throw new Error('No slug post!')
   }
 
-  // TODO: ブログ一覧ページの getStaticProps と処理がかぶるので共通化する
   const contentsDirPath = path.join(process.cwd(), 'contents')
   const filePath = path.join(contentsDirPath, slug)
   const md = await fs.readFile(filePath, 'utf-8')
-  const { data, content } = matter(md)
-  const title = typeof data.title === 'string' ? data.title : '題名なし'
-  const publishedAt = typeof data.publishedAt === 'string' ? data.publishedAt : '公開日不明'
+  const { title, publishedAt, content } = markdownDataExtractor(md)
 
   return {
     props: {

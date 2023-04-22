@@ -4,7 +4,7 @@ import * as fs from 'fs/promises'
 import * as path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
-import { format, parseISO } from 'date-fns'
+import { format, isAfter, parseISO } from 'date-fns'
 
 interface PostHeadline {
   title: string
@@ -54,9 +54,9 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
       }
     }),
   )
-  const posts = groupedPosts
-    .flat()
-    .sort((a, b) => (new Date(a.publishedAt) > new Date(b.publishedAt) ? -1 : 1))
+  const posts = [...groupedPosts].sort((a, b) =>
+    isAfter(new Date(a.publishedAt), new Date(b.publishedAt)) ? -1 : 1,
+  )
 
   return {
     props: { posts },

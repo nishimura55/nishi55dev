@@ -17,8 +17,6 @@ interface HomeProps {
 }
 
 const Home: NextPage<HomeProps> = ({ posts }) => {
-  console.log({ posts })
-
   return (
     <div className='h-full bg-blue-300 p-4 text-white'>
       <PageTitle title='nishiのブログページ' isVisible={false} />

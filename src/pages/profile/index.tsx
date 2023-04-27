@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import Image from 'next/image'
 import { PageTitle } from '~/src/components/common/PageTitle'
-import ProfileImage from '~/public/sample-image.png'
+import ProfileIconImage from '~/public/ProfileIcon.png'
 import { SocialIcon } from 'react-social-icons'
 import { links, skillNames } from '~/src/constants/profile'
 
@@ -12,7 +12,7 @@ const Profile: NextPage = () => {
       <div className='mt-3 flex flex-col gap-7 sm:px-8'>
         <div className='flex justify-center'>
           <Image
-            src={ProfileImage}
+            src={ProfileIconImage}
             alt='プロフィール画像'
             className='h-32 w-32 rounded-full sm:h-40 sm:w-40'
           />

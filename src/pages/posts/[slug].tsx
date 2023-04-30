@@ -19,7 +19,7 @@ const Post: NextPage<PostProps> = ({ title, publishedAt, content }) => {
       <div className='mt-2 text-center text-sm text-gray-500'>
         {format(parseISO(publishedAt), 'yyyy.MM.dd')}
       </div>
-      <div className='mt-4'>
+      <div className='my-4'>
         <MarkdownRenderer md={content} />
       </div>
     </div>

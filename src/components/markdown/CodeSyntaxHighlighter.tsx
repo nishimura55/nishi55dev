@@ -13,17 +13,19 @@ export const CodeSyntaxHighlighter = ({
   const match = /language-(\w+)/.exec(className || '')
 
   return !inline && match ? (
-    <SyntaxHighlighter
-      style={vscDarkPlus}
-      customStyle={{ borderRadius: '0.25rem' }}
-      language={match[1]}
-      PreTag='div'
-      {...props}
-    >
-      {String(children).replace(/\n$/, '')}
-    </SyntaxHighlighter>
+    <div className='my-4'>
+      <SyntaxHighlighter
+        style={vscDarkPlus}
+        customStyle={{ borderRadius: '0.25rem' }}
+        language={match[1]}
+        PreTag='div'
+        {...props}
+      >
+        {String(children).replace(/\n$/, '')}
+      </SyntaxHighlighter>
+    </div>
   ) : (
-    <div className='rounded bg-black p-4'>
+    <div className='my-4 rounded bg-black p-4'>
       <code className={className} {...props}>
         {children}
       </code>

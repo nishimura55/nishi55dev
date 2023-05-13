@@ -8,7 +8,12 @@ export const Header = () => {
           nishi
         </Link>
         <nav>
-          <ul>
+          <ul className='flex items-center gap-4'>
+            <li>
+              <a href='https://github.com/nishimura55' target='_blank' rel='noreferrer noopener'>
+                GitHub
+              </a>
+            </li>
             <li>
               <Link href='/profile'>Profile</Link>
             </li>

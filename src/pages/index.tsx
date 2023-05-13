@@ -18,7 +18,7 @@ interface HomeProps {
 
 const Home: NextPage<HomeProps> = ({ posts }) => {
   return (
-    <div className='h-full bg-blue-600 p-4 text-white'>
+    <div className='h-full bg-primary p-4 text-white'>
       <PageTitle title='nishiのブログページ' isVisible={false} />
       <div className='mt-3 sm:px-8'>
         {posts.map((post) => (

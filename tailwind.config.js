@@ -6,6 +6,10 @@ module.exports = {
       maxWidth: {
         pageContent: '640px',
       },
+      backgroundColor: {
+        primary: '#0A4D68',
+        secondary: '#ECF9FF',
+      },
     },
   },
   plugins: [

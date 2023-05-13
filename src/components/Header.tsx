@@ -3,7 +3,7 @@ import Link from 'next/link'
 export const Header = () => {
   return (
     <header>
-      <div className='flex h-16 items-center justify-between bg-blue-900 px-4 text-white'>
+      <div className='flex h-16 items-center justify-between bg-primary px-4 text-white'>
         <Link className='text-3xl font-bold' href='/'>
           nishi
         </Link>

@@ -18,7 +18,7 @@ publishedAt: '2023-04-23T14:20:00+09:00'
 いいいいいい
 
 ```typescript
-const hoge = 1
+const hoge = 11111111111111111111111111111111111111111111111111
 const fuga = 2
 ```
 

@@ -3,7 +3,7 @@ import { PageTitle } from '~/src/components/common/PageTitle'
 
 const Disclaimer: NextPage = () => {
   return (
-    <div className='h-full bg-blue-600 p-4 pb-8 text-white'>
+    <div className='h-full bg-primary p-4 pb-8 text-white'>
       <PageTitle title='免責事項' size='sm' />
       <p className='p-4'>
         当ブログのコンテンツによって生じた損害に対する一切の責任を負いません。

@@ -14,7 +14,7 @@ interface PostProps {
 
 const Post: NextPage<PostProps> = ({ title, publishedAt, content }) => {
   return (
-    <div className='h-full bg-blue-600 p-4 text-white'>
+    <div className='h-full bg-primary p-4 text-white'>
       <PageTitle title={title} size='sm' />
       <div className='mt-2 text-center text-sm'>{format(parseISO(publishedAt), 'yyyy.MM.dd')}</div>
       <div className='my-10'>

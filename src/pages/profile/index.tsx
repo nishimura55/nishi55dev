@@ -38,7 +38,12 @@ const Profile: NextPage = () => {
           <ul className='flex flex-wrap gap-3 text-sm'>
             {links.map((link) => (
               <li key={link.url}>
-                <SocialIcon target='_blank' url={link.url} style={{ height: 32, width: 32 }} />
+                <SocialIcon
+                  target='_blank'
+                  url={link.url}
+                  style={{ height: 32, width: 32 }}
+                  fgColor='white'
+                />
               </li>
             ))}
           </ul>

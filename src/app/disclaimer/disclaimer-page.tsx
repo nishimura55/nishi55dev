@@ -1,7 +1,6 @@
-import { NextPage } from 'next'
 import { PageTitle } from '~/src/components/common/PageTitle'
 
-const Disclaimer: NextPage = () => {
+export const DisclaimerPage = () => {
   return (
     <div className='h-full bg-primary p-4 pb-8 text-white'>
       <PageTitle title='免責事項' size='sm' />
@@ -15,5 +14,3 @@ const Disclaimer: NextPage = () => {
     </div>
   )
 }
-
-export default Disclaimer

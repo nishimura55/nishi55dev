@@ -1,11 +1,10 @@
-import { NextPage } from 'next'
 import Image from 'next/image'
 import { PageTitle } from '~/src/components/common/PageTitle'
 import ProfileIconImage from '~/public/ProfileIcon.png'
 import { SocialIcon } from 'react-social-icons'
 import { links, skillNames } from '~/src/constants/profile'
 
-const Profile: NextPage = () => {
+export const ProfilePage = () => {
   return (
     <div className='h-full bg-primary p-4 pb-8 text-white'>
       <PageTitle title='nishiのプロフィール' isVisible={false} />
@@ -52,5 +51,3 @@ const Profile: NextPage = () => {
     </div>
   )
 }
-
-export default Profile

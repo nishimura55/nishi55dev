@@ -27,10 +27,8 @@ export const CodeSyntaxHighlighter = ({
       </SyntaxHighlighter>
     </div>
   ) : (
-    <div className='my-4 rounded bg-black p-4'>
-      <code className={className} {...props}>
-        {children}
-      </code>
-    </div>
+    <code className={`bg-gray-300 text-black px-[2px] rounded-sm ${className}`} {...props}>
+      {children}
+    </code>
   )
 }
